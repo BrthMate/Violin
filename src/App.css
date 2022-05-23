@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400&family=Open+Sans:wght@400;600&display=swap');
+/*
+font-family: 'Jost', sans-serif;
+font-family: 'Open Sans', sans-serif;
+*/
+:root{
+
+    --gold:  #bd9851;
+    --dark: #202020;
+    --bg-color: rgb(235, 228, 228);
+    --Open: 'Open Sans', sans-serif;
+    --Jost:'Jost', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+    background-color: var(--bg-color);
+    color: var(--dark);
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: var(--Jost);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#root{
+    overflow: hidden;
 }

@@ -1,0 +1,33 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+label{
+    font-family: var(--Open);
+}
+
+input:focus,textarea:focus{
+    outline: none!important;
+    box-shadow: none!important;
+    border-bottom: 2px solid var(--bg-color);
+}
+
+input,textarea{
+    resize: none;
+    margin: 5px 0;
+    padding: 10px 2px;
+    background: var(--dark);
+    border: unset;
+    color: var(--bg-color);
+    border-bottom: 2px solid var(--gold);
+    width: 100%;
+}
+button{
+    background: var(--gold);
+    border:unset;
+    width: fit-content ;
+    padding: 5px 10px;
+    margin: 15px auto 0;
+    font-size: 1rem;
+}

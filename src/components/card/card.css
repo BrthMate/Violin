@@ -1,0 +1,60 @@
+.slider{
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider .btn {
+    position: absolute;
+    top:50%;
+    background-color: var(--dark);
+    border:unset;
+    padding: 5px;
+    z-index: 9;
+}
+
+box-icon{
+    fill:var(--gold);
+}
+
+.slider .btn.right{
+    right: -5%;
+}
+
+.slider .btn.left{
+    left: -5%;
+}
+
+.slider a{
+    width: 100%;
+    height: 100%;
+}
+
+.slider .slider-img{
+    width: 50%;
+    height: 100%;
+    display: none;
+    margin: 0;
+}
+
+.slider .teacher-box{
+    height: 100%;
+    padding: 10px;
+    display: none;
+}
+.slider .name{
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family:  var(--Open);
+    margin-bottom: 5px;
+}
+.slider .text{
+
+}
+.slider .btn-t{
+    margin-top: 15px;
+}
+
+.slider .slider-img.active,.slider .teacher-box.active{
+    display: block;
+}

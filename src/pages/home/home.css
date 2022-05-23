@@ -1,0 +1,197 @@
+.home-container{
+    /*scroll-snap-type:y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;*/
+}
+
+section{
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /*scroll-snap-align: start;*/
+}
+#home .container{
+    position: relative;
+    height: 100vh;
+    max-width: 1300px;
+}
+
+#home .home-text-container{
+    position: absolute;
+    top:40%;
+    left: 10%;
+    font-size: 5rem;
+    z-index: 7;
+}
+
+#home .title{
+    margin-bottom: 20px;
+    opacity: 0;
+}
+
+#home .title span{
+    display: block;
+}
+
+#home .title .line-one{
+    font-weight: 300;
+    line-height: 20px;
+}
+
+#home .title .line-two{
+    font-family: var(--Open);
+    font-weight: 600;
+}
+
+#home .text{
+    font-size: 1.2rem;
+    width: 40%;
+    opacity: 0;
+}
+
+#home .text span{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    
+}
+
+#home .text a{
+    text-decoration: none;
+    color: var(--gold);
+    font-family: var(--Open);
+    font-weight: 600;
+    opacity: 0;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    right: 0;
+    bottom: 5%;
+}
+#home .row{
+    opacity: 0;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    overflow: hidden;
+    margin: 5px;
+    justify-content: center;
+}
+
+.row img{
+    height: 40%;
+    object-fit: cover;
+    width: 100%;
+    margin: 10px 0;
+}
+
+
+#about-us,#our-values,#contact {
+    background-color: var(--dark);
+    color:var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    height: 100vh;
+}
+#instuctor{
+    font-size: 0.8rem;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#about-us .container .row,#our-values .container .row,#instuctor .container .row,#contact .container .row{
+    width: calc(100% - 50px);
+    height: 30%;
+    position: relative;
+    margin: auto;
+}
+
+#contact .container .row:nth-child(2),#instuctor .container .row:nth-child(2){
+    height: 50%;
+    overflow: unset;
+    max-width: 400px;
+}
+
+#about-us .container .row:nth-child(1),#our-values .container .row:nth-child(1),#instuctor .container .row:nth-child(1),#contact .container .row:nth-child(1){
+    height: fit-content;
+}
+
+#about-us .container img,#our-values .container img{
+    height: 100%;
+    width: 50%;
+    margin: 0;
+}
+
+.about-text-container{
+    margin-top: 80px;
+    width: 50%;
+    margin-left: 10px;
+    border-left: 3px solid var(--gold);
+    padding: 10px;
+    display: inline-block;
+}
+
+.about-text-container .title{
+    font-family: var(--Open);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+
+@media screen and (max-width:800px) {
+    #home .home-text-container{
+        position: absolute;
+        top:25%;
+        left: 10%;
+        font-size: 5rem;
+        z-index: 7;
+    }
+    #home .text{
+        width: 50%;
+    }
+    .about-text-container{
+        width: 75%;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+    #home .home-text-container{
+        position: absolute;
+        top:25%;
+        left: 10%;
+        font-size: 4rem;
+        z-index: 7;
+    }
+    #home .text{
+        width: 70%;
+    }
+    .about-text-container{
+        width: 100%;
+        margin-left:0 ;
+    }
+}
