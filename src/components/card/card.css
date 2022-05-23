@@ -55,6 +55,12 @@ box-icon{
     margin-top: 15px;
 }
 
-.slider .slider-img.active,.slider .teacher-box.active{
-    display: block;
+.slider .slider-img.active,.slider{
+    display: flex;
+}
+
+.teacher-box.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }

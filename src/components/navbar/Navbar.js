@@ -7,16 +7,12 @@ const Navbar = () => {
 
   const [navbar,setNavbar] = useState(false);
   const [menu,setMenu] = useState(false);
-  const [scroll,setScroll] = useState(0);
-
 
   const scrollfunc = () => {
     if(window.scrollY > 0){
       setNavbar(true)
-      //setScroll(window.scrollY)
     }else{
       setNavbar(false)
-      //setScroll(0)
     }
   }
 
@@ -31,7 +27,7 @@ const Navbar = () => {
   document.addEventListener('scroll', scrollfunc);
 
   return (
-    <nav className= {navbar ? "active" : ""} style={{ top: scroll}}>
+    <nav className= {navbar ? "active" : ""}>
         <div className='logo'>Logo</div>
         <div className='ham-menu' onClick={Menufunc}>Menu</div>
         <div className={ menu ? " links-container active" : "links-container"}>

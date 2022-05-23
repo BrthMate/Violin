@@ -176,6 +176,9 @@ section{
     .about-text-container{
         width: 75%;
     }
+    .img-container{
+        opacity: 0.5;
+    }
 }
 
 
