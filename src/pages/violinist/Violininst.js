@@ -85,7 +85,6 @@ const Violininst = () => {
           ease: "power4.out"
         })
         .to(a(".row"), {
-          opacity: 1,
           ease: "power4.out",
           y:"0",
         })
@@ -243,10 +242,10 @@ const Violininst = () => {
                 </div>
               </div>
               <div className='row'>
-                <Price/>   
-                <Price/> 
-                <Price/> 
-                <Price/>         
+                <Price type="Express" desc="4 lessos of 45min"  price = "150$"/>   
+                <Price type="Express" desc="4 lessos of 45min"  price = "250$"/> 
+                <Price type="Express" desc="4 lessos of 45min"  price = "80$"/> 
+                <Price type="Express" desc="4 lessos of 45min"  price = "free"/>     
               </div>
             </div>
           </section>
