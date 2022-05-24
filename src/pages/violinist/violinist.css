@@ -1,0 +1,192 @@
+.me-container{
+    /*scroll-snap-type:y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    margin: 0;*/
+}
+
+#me .container{
+    position: relative;
+    height: 100vh;
+    max-width: 1300px;
+}
+
+#me .me-text-container{
+    position: absolute;
+    top:56px;
+    left: 0%;
+    z-index: 7;
+    display: flex;
+}
+
+#me img{
+    width: 50vw;
+    height: calc( 100vh - 56px);
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 1s;
+}
+
+#me img:hover{
+    filter: grayscale(0);
+}
+
+#me .name{
+    margin-bottom: 10px;
+    opacity: 0;
+    font-size: 3rem;
+}
+
+#me .me-details{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#me .about-text-container{
+    width: 100%;
+    margin: 20px auto;
+}
+
+#me ul li {
+    list-style-type: none;
+}
+
+#me .text{
+    font-size: 1.2rem;
+    opacity: 0;
+}
+
+#me .text span{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    
+}
+
+#me .text a{
+    text-decoration: none;
+    color: var(--gold);
+    font-family: var(--Open);
+    font-weight: 600;
+    opacity: 0;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    right: 0;
+    bottom: 5%;
+}
+#me .row{
+    opacity: 0;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    overflow: hidden;
+    margin: 5px;
+    justify-content: center;
+}
+
+.row img{
+    height: 40%;
+    object-fit: cover;
+    width: 100%;
+    margin: 10px 0;
+}
+
+#service .row{
+    opacity: 0;
+}
+
+#service,#our-values,#contact {
+    background-color: var(--dark);
+    color:var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    height: 100vh;
+}
+
+
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#service .container .row,#our-values .container .row,#instuctor .container .row,#contact .container .row{
+    width: calc(100% - 50px);
+    height: 30%;
+    position: relative;
+    margin: auto;
+}
+
+#contact .container .row:nth-child(2),#instuctor .container .row:nth-child(2){
+    height: 50%;
+    overflow: unset;
+    max-width: 400px;
+}
+
+#service .container .row:nth-child(1),#our-values .container .row:nth-child(1),#instuctor .container .row:nth-child(1),#contact .container .row:nth-child(1){
+    height: fit-content;
+}
+
+#service .container img,#our-values .container img{
+    height: 100%;
+    width: 50%;
+    margin: 0;
+}
+
+.about-text-container{
+    margin-top: 80px;
+    width: 50%;
+    margin-left: 10px;
+    border-left: 3px solid var(--gold);
+    padding: 10px;
+    display: inline-block;
+}
+
+.about-text-container .title{
+    font-family: var(--Open);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+
+@media screen and (max-width:800px) {
+
+    .about-text-container{
+        width: 75%;
+    }
+    .img-container{
+        opacity: 0.5;
+    }
+}
+
+
+@media screen and (max-width:400px) {
+
+    .about-text-container{
+        width: 100%;
+        margin-left:0 ;
+    }
+}

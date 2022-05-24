@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { Link } from "react-router-dom";
 
 import './navbar.css';
 
@@ -43,10 +42,3 @@ const Navbar = () => {
 }
 
 export default Navbar
-/*
-            <Link className= "links" to="#home">Home</Link>
-            <Link className= "links" to="#about-us">About Us</Link>
-            <Link className= "links" to="#our-values">Our values</Link>
-            <Link className= "links" to="#instuctor">Instuctor</Link>
-            <Link className= "links" to="#contact">Contact</Link>
-*/
