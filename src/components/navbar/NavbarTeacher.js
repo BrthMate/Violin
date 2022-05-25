@@ -32,8 +32,8 @@ const NavbarTeacher = () => {
               <Link onClick={Menufunc} className= "links" to="/">Violininsts</Link>
               <a onClick={Menufunc} className= "links" href="#me">Me</a>
               <a onClick={Menufunc} className= "links" href="#service">Services</a>
-              <a onClick={Menufunc} className= "links" href="#service">About Me</a>
-              <a onClick={Menufunc} className= "links" href="#service">Feedback</a>
+              <a onClick={Menufunc} className= "links" href="#about-mes">About Me</a>
+              <a onClick={Menufunc} className= "links" href="#feedback">Feedback</a>
               <a onClick={Menufunc} className= "links" href="#contact">Contact</a>
           </div>
   

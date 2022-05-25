@@ -3,7 +3,7 @@ import cardData from '../../components/card/cardData';
 import {useParams} from "react-router-dom";
 import React,{ useEffect, useRef }  from 'react'
 import './../home/home.css';
-import Card from './../../components/card/Card';
+import Feedback from "../../components/feedback/Feedback";
 import Form from '../../components/form/Form';
 import Price from "../../components/price/Price";
 import  gsap  from "gsap";
@@ -15,18 +15,22 @@ const Violininst = () => {
   
       const meSection = useRef();
       const serviceSection = useRef();
-      const valuesSection = useRef();
-      const instuctorSection = useRef();
+      const aboutmeSection = useRef();
+      const feedbackSection = useRef();
       const contactSection = useRef();
     
       const h = gsap.utils.selector(meSection);
       const a = gsap.utils.selector(serviceSection);
-      const v = gsap.utils.selector(valuesSection);
-      const i = gsap.utils.selector(instuctorSection);
+      const v = gsap.utils.selector(aboutmeSection);
+      const i = gsap.utils.selector(feedbackSection);
       const c = gsap.utils.selector(contactSection);
       
       gsap.registerPlugin(ScrollTrigger);
     
+      useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
+      
       useEffect(() => {            
         const tl = gsap.timeline()
           .from(h(".container"), {
@@ -123,7 +127,7 @@ const Violininst = () => {
         })
         const t4 = gsap.timeline({
           scrollTrigger: {
-            trigger: "#our-values",
+            trigger: "#about-mes",
             start: "center",
             scrub: true,
             //markers: true
@@ -156,7 +160,7 @@ const Violininst = () => {
         })
         const t5 = gsap.timeline({
           scrollTrigger: {
-            trigger: "#instuctor",
+            trigger: "#feedback",
             start: "center",
             scrub: true,
             //markers: true
@@ -249,12 +253,12 @@ const Violininst = () => {
               </div>
             </div>
           </section>
-          <section ref={valuesSection} id="our-values">
+          <section ref={aboutmeSection} id="about-mes">
           <div className="container">
               <div className="row">
                 <div className='about-text-container'>
                   <div className='title'>
-                    Our Values
+                    About Me
                   </div>
                   <div className='text'>
                     Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like
@@ -263,12 +267,12 @@ const Violininst = () => {
               </div>
             </div>
           </section>
-          <section ref={instuctorSection} id="instuctor">
+          <section ref={feedbackSection} id="feedback">
           <div className="container">
             <div className="row">
               <div className='about-text-container'>
                 <div className='title'>
-                  Instuctor
+                  Feedback
                 </div>
                 <div className='text'>
                   Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like
@@ -276,7 +280,7 @@ const Violininst = () => {
               </div>
             </div>
             <div className='row'>
-              <Card />           
+              <Feedback />           
             </div>
           </div>
           </section>

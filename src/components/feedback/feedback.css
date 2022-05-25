@@ -1,0 +1,31 @@
+
+.slider .feedback-box{
+    height: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.slider .text{
+    width: 80%;
+    margin: auto;
+    display: block;
+    position: relative;
+    text-align: justify;
+}
+
+.feedback-box.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.feedback-box .mark{
+    font-size: 2rem;
+    color: var(--gold);
+    position: absolute;
+}
+
+.feedback-box .left-mark{
+    left: -5%;
+    top:-15%;
+}

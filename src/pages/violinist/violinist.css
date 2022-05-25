@@ -38,6 +38,7 @@
     margin-bottom: 10px;
     opacity: 0;
     font-size: 3rem;
+    text-transform: uppercase;
 }
 
 #me .me-details{
@@ -45,6 +46,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 40%;
+    margin: auto;
 }
 
 #me .about-text-container{
@@ -85,7 +88,7 @@
     height: min-content;
 }
 
-#service,#our-values,#contact {
+#service,#about-mes,#contact {
     background-color: var(--dark);
     color:var(--bg-color);
     display: flex;
@@ -100,34 +103,39 @@
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 35px;
+    height: fit-content;
 }
 
+#service .container{
+    min-height: 100vh;
+    height: fit-content;
+}
 .container{
     max-width: 1100px;
     margin: auto;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-#service .container .row,#our-values .container .row,#instuctor .container .row,#contact .container .row{
+#service .container .row,#about-mes .container .row,#feedback .container .row,#contact .container .row{
     width: calc(100% - 50px);
     height: 30%;
     position: relative;
     margin: auto;
 }
 
-#contact .container .row:nth-child(2),#instuctor .container .row:nth-child(2){
+#contact .container .row:nth-child(2),#feedback .container .row:nth-child(2){
     height: 50%;
     overflow: unset;
     max-width: 400px;
 }
 
-#service .container .row:nth-child(1),#our-values .container .row:nth-child(1),#instuctor .container .row:nth-child(1),#contact .container .row:nth-child(1){
+#service .container .row:nth-child(1),#about-mes .container .row:nth-child(1),#feedback .container .row:nth-child(1),#contact .container .row:nth-child(1){
     height: fit-content;
 }
 
-#service .container img,#our-values .container img{
+#service .container img,#about-mes .container img{
     height: 100%;
     width: 50%;
     margin: 0;
@@ -161,16 +169,43 @@
     .about-text-container{
         width: 75%;
     }
+
     .img-container{
         opacity: 0.5;
     }
 }
 
+@media screen and (max-width:500px) {
+
+    #me .me-text-container{
+        flex-direction: column;
+    }
+
+    #me .me-details{
+        width: 80%;
+    }
+
+    #me img{
+        width: 100vw;
+        height: 40vh;
+        object-position: top;
+    }
+
+    #me .me-details .about-text-container:nth-child(3){
+        display: none;
+    }
+}
 
 @media screen and (max-width:400px) {
 
     .about-text-container{
         width: 100%;
         margin-left:0 ;
+    }
+}
+
+@media screen and ( max-height:600px ) {
+    .me-img{
+        min-height: 600px;
     }
 }

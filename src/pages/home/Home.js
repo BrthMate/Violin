@@ -32,6 +32,10 @@ const Home = () => {
   
   gsap.registerPlugin(ScrollTrigger);
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   useEffect(() => {            
     const tl = gsap.timeline()
       .from(h(".container"), {
